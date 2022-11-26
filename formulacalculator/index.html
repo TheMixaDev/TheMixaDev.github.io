@@ -25,11 +25,6 @@
                 <span class="msohide es-button-border es-virtual-button"><a class="es-button es-button-1 msohide es-linked-button" onclick="formManager.switchForm('mixadev.forms.calculator.Bayes')">Формула Байеса</a></span>
               </td>
             </tr>
-            <tr>
-              <td align="center">
-                <span class="msohide es-button-border es-virtual-button"><a class="es-button es-button-1 msohide es-linked-button" onclick="formManager.switchForm('mixadev.forms.calculator.Full')">Формула полной вероятности</a></span>
-              </td>
-            </tr>
           </table>
       </div>
       <div class="mixadev-content-body" id="mixadev.forms.calculator.Bernul"  style="display: none; opacity: 0">
@@ -119,48 +114,6 @@
             <tr>
               <td align="center">
                 <span class="msohide es-button-border es-virtual-button"><a class="es-button es-button-1 msohide es-linked-button" onclick="calculator.Bayes();">Рассчитать</a></span>
-              </td>
-            </tr>
-            <tr>
-              <td align="center">
-                <span class="msohide es-button-border es-virtual-button"><a class="es-button es-button-1 msohide es-linked-button" onclick="formManager.switchForm('mixadev.forms.Main')">Вернуться в меню</a></span>
-              </td>
-            </tr>
-          </table>
-      </div>
-      <div class="mixadev-content-body" id="mixadev.forms.calculator.Full"  style="display: none; opacity: 0">
-        <h2 class="es-title">Формула полной вероятности</h2>
-          <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-            <tr>
-              <td align="right">
-                Количество особей
-              </td>
-              <td align="left" id="mixadev.forms.calculator.Full.amount">
-                <span id="mixadev.forms.calculator.Full.enumerator.1.amount.element">
-                  1-ое стадо: <input type="number" placeholder="0" style="width: 50px;" id="mixadev.forms.calculator.Full.enumerator.1.amount.value" onchange="visuals.update('Full')" onfocus="visuals.update('Full')"> особей
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <td align="right">
-                Количество больных особей
-              </td>
-              <td align="left" id="mixadev.forms.calculator.Full.percent">
-                <span id="mixadev.forms.calculator.Full.enumerator.1.percent.element">
-                  1-ое стадо: <input type="number" placeholder="0" style="width: 50px;" id="mixadev.forms.calculator.Full.enumerator.1.percent.value" onchange="visuals.update('Full')" onfocus="visuals.update('Full')"> %
-                </span>
-              </td>
-            </tr>
-          </table>
-          <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-            <tr>
-              <td align="center">
-                <span class="mixadev-result-label" id="mixadev.forms.calculator.Full.result.label" style="opacity: 0">Результат: <b class="mixadev-result-bold" id="mixadev.forms.calculator.Full.result.number">0.00%</b></span>
-              </td>
-            </tr>
-            <tr>
-              <td align="center">
-                <span class="msohide es-button-border es-virtual-button"><a class="es-button es-button-1 msohide es-linked-button" onclick="calculator.Full();">Рассчитать</a></span>
               </td>
             </tr>
             <tr>

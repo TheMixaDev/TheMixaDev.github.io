@@ -29,7 +29,6 @@ let formManager = {
                 element.style.opacity = 0;
         }
         visuals.update("Bayes");
-        visuals.update("Full");
     }
 };
 const visuals = {
@@ -136,42 +135,5 @@ const calculator = {
         let result = P[k-1]*C[k-1]/E;
         result = Math.round(result*100000)/1000;
         formManager.showResult("Bayes", result+"%");
-    },
-    Full: function() {
-        let A = [];
-        let C = [];
-        let P = [];
-        for(element of e("mixadev.forms.calculator.Full.amount").querySelectorAll('*[id]')) {
-            if(element.id.includes(".value")) {
-                A.push(0);
-                P.push(null);
-                if(element.value.length > 0) {
-                    A[A.length-1] = Math.floor(element.value*1);
-                    A[A.length-1] = A[A.length-1] >= 0 ? A[A.length-1] : 0;
-                }
-            }
-        }
-        for(element of e("mixadev.forms.calculator.Full.percent").querySelectorAll('*[id]')) {
-            if(element.id.includes(".value")) {
-                C.push(0);
-                if(element.value.length > 0) {
-                    C[C.length-1] = Math.floor(element.value*1)/100;
-                    C[C.length-1] = C[C.length-1] <= 1 ? C[C.length-1] : 1;
-                }
-            }
-        }
-        A.pop();
-        C.pop();
-        P.pop();
-        B = A.reduce((partialSum, a) => partialSum + a, 0);
-        for(let i in P) {
-            P[i] = A[i] / B;
-        }
-        let E = 0;
-        for(let i in A) {
-            E += P[i] * C[i];
-        }
-        E = Math.round(E*100000)/1000;
-        formManager.showResult("Full", E+"%");
     }
 };
